@@ -21,4 +21,12 @@ public class TeamTest {
     assertEquals(true, firstTeam.getAll().contains(firstTeam));
     assertEquals(true, secondTeam.getAll().contains(secondTeam));
   }
+
+  @Test
+  public void addToTeam_addsMemberToTeam_true() {
+    Team testTeam = new Team("script jockeys");
+    Member testMember = new Member("Snowden", "h4x");
+    testTeam.addToTeam(testMember);
+    assertTrue(testTeam.getMembers().contains(testMember));
+  }
 }

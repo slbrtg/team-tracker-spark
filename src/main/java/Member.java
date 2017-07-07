@@ -22,4 +22,5 @@ public class Member {
   public String getInterests(){
     return mInterests;
   }
+
 }
