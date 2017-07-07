@@ -1,4 +1,4 @@
-<h1>Program Weekend Hackathon</h1>
+<h1>Weekend Hackathon</h1>
 <h3>Add your team:</h3>
 
 <form action="/" method="post">
@@ -10,12 +10,11 @@
 
 <div class="Teams Attending">
   <h2>Teams Attending</h2>
+  <span>_______________________________________________</span>
   #if ($teams)
-  <ul>
     #foreach ($team in $teams)
-      <li><a href="/team/$team.getId()">$team.getName()</a></li>
+      <h2><a href="/team/$team.getId()">$team.getName()</a></h2>
     #end
-  </ul>
 #else
   <h3>No teams signed up yet</h3>
 #end
