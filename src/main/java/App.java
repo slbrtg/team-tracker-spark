@@ -24,5 +24,13 @@ public class App {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
+    get("/team/:id", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      Team team = Team.find(Integer.parseInt(request.params(":id")));
+      model.put("team", team);
+      model.put("template", "templates/team.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
   }
 }

@@ -5,15 +5,18 @@
   <label for="team-name">Team name</label>
   <input id="teamName" name="teamName" type="text">
 
-  <button type="submit" class="btn btn-default">Add team</button>
+  <button type="submit" class="btn btn-primary">Add team</button>
 </form>
 
 <div class="Teams Attending">
+  <h2>Teams Attending</h2>
   #if ($teams)
+  <ul>
     #foreach ($team in $teams)
-        <h3><a href="/teams/$team.getId()">$team.getDescription()</a></h3>
+      <li><a href="/team/$team.getId()">$team.getName()</a></li>
     #end
+  </ul>
 #else
-  <h3>There are no teams signed up</h3>
+  <h3>No teams signed up yet</h3>
 #end
 </div>
