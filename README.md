@@ -13,7 +13,7 @@ _A web application that allows users to create teams and members for teams._
 
 ## Setup/Installation Requirements
 
-* _Clone project _
+*  Clone project 
 * _nav to project in terminal and run 'gradle run'_
 * _Open a browser and head over to localhost:4567_
 
