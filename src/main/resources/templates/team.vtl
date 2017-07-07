@@ -1,0 +1,19 @@
+<h1>$team.getName()</h1>
+<h3>Add a team member:</h3>
+
+<form action="/team/$team.getId()" method="post">
+  <label for="member-name">Name</label>
+  <input id="memberName" name="memberName" type="text">
+
+  <label for="member-interests">Interests</label>
+  <input id="memberInterests" name="memberInterests" type="text">
+
+  <button type="submit" class="btn btn-primary">Add member</button>
+</form>
+
+<div class="team-members">
+  <h2>Team members</h2>
+    #foreach ($member in $team.getMembers())
+      <h3><a href="/team/$team.getId()">$member.getName()</a></h3>
+    #end
+</div>

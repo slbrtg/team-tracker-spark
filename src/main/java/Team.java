@@ -32,4 +32,8 @@ public class Team {
     return mTeamMembers;
   }
 
+  public static Team find(int id) {
+   return instances.get(id);
+  }
+
 }
